@@ -1,12 +1,16 @@
 FROM python:3.10.4-slim-buster
 
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
 RUN apt-get update && apt-get install --no-install-recommends -y \
     make \
     nano \
     wget
+
+ARG ENVIRONMENT
+
+ENV ENVIRONMENT=${ENVIRONMENT} \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    POETRY_VERSION=1.2.0
 
 RUN pip install --no-cache-dir --upgrade pip setuptools==49.2.1 && pip install "poetry==$POETRY_VERSION"
 
