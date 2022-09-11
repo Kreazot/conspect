@@ -6,7 +6,7 @@ authors = ["Anton Rodin <agentmorra@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.10.7"
+python = "3.10.4"
 
 
 [build-system]
