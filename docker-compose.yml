@@ -1,11 +1,11 @@
 version: "3"
 services:
-  conspect:
+  app:
     build:
       context: .
       dockerfile: docker/conspect/Dockerfile
     image: localhost/conspect
-    container_name: conspect
+    container_name: conspect_app
     env_file: docker/.dockerenv
     restart: always
     ports:
