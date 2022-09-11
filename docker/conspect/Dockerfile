@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 RUN pip install --no-cache-dir --upgrade pip setuptools==49.2.1 && pip install "poetry==$POETRY_VERSION"
 
 WORKDIR /conspect
-COPY conspect/poetry.lock pyproject.toml /conspect/
+COPY ./poetry.lock pyproject.toml /conspect/
 
 RUN poetry config virtualenvs.create false \
 && poetry install $(test "$ENVIRONMENT" == production && echo "--no-dev") --no-interaction --no-ansi
