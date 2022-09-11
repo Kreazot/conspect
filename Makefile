@@ -4,7 +4,7 @@ build:
 up:
 	docker-compose up -d
 
-status:
+ps:
 	docker-compose ps
 
 down:
