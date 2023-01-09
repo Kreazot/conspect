@@ -1,2 +1,2 @@
 # conspect
-Conspectus
+Translating voice messages into text
