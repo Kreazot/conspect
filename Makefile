@@ -24,3 +24,10 @@ test:
 
 flake8:
 	docker-compose exec app flake8 --count
+
+# pipenv
+lock:
+	docker-compose exec app pipenv lock -v
+
+graph:
+	docker-compose exec app pipdeptree
