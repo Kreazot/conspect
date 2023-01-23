@@ -22,6 +22,10 @@ log:
 test:
 	docker-compose exec app pytest
 
+# linter
+format:
+	docker-compose exec app isort . --line-length 120 --multi-line 3 && black . -S -l 120
+
 flake8:
 	docker-compose exec app flake8 --count
 
